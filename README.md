@@ -25,8 +25,8 @@ var mySVG = $('#my_svg_element').drawsvg({
 				easing: 'swing',
 				reverse: false,
 				callback: function() {
-          console.log('animation complete!');
-        }
+					console.log('animation complete!');
+				}
 			});
 ```
 
