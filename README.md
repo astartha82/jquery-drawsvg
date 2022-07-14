@@ -19,16 +19,22 @@ Include jQuery DrawSVG after jQuery
 Initialize the plugin on the <svg> element you want to animate and store in a variable
 
 ```js
-var mySVG = $('#my_svg_element').drawsvg();
+var mySVG = $('#my_svg_element').drawsvg({
+				duration: 1000,
+				stagger: 200,
+				easing: 'swing',
+				reverse: false,
+				callback: function() {
+          console.log('animation complete!');
+        }
+			});
 ```
 
 Run the animation
 
 ```js
-mySVG.drawsvg('animate');
+mySVG.animate();
 ```
-
-Look at the demos for more advanced usages.
 
 ## Options
 
@@ -40,13 +46,4 @@ Look at the demos for more advanced usages.
 | `reverse`  | Boolean  | `false`         | Direction that the line will be drawn.                                                                                                                       |
 | `callback` | Function | `function() {}` | A function to call once the animation has been completed. |
 
-## Demos
-
-[Simple usage](http://codepen.io/lcdsantos/pen/zvGXbr/)
-
-[Draw on scroll](http://codepen.io/lcdsantos/pen/zvGQYB/)
-
-[Callback example](http://codepen.io/lcdsantos/pen/vNNXrm/)
-
-[Animate mask path](http://codepen.io/lcdsantos/pen/xwwEJw/)
 
